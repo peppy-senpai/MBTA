@@ -1,0 +1,16 @@
+[out:json][timeout:180];
+(
+  // ── MBTA Commuter Rail LINES ──────────────────────────
+  way["railway"="rail"]["operator"~"MBTA|Massachusetts Bay Transportation Authority",i](41.2,-73.6,42.9,-69.8);
+  way["railway"="rail"]["network"~"MBTA",i](41.2,-73.6,42.9,-69.8);
+  way["railway"="rail"]["ref"~"^CR-",i](41.2,-73.6,42.9,-69.8);
+
+  // ── MBTA Commuter Rail STATIONS ───────────────────────
+  node["railway"="station"]["operator"~"MBTA",i](41.2,-73.6,42.9,-69.8);
+  node["railway"="stop"]["operator"~"MBTA",i](41.2,-73.6,42.9,-69.8);
+  node["railway"="halt"]["operator"~"MBTA",i](41.2,-73.6,42.9,-69.8);
+  node["public_transport"="stop_position"]["operator"~"MBTA",i](41.2,-73.6,42.9,-69.8);
+);
+out body;
+>;
+out skel qt;
